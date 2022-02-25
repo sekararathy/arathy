@@ -6,7 +6,9 @@
 trigger:
 - master
 
-pool: Default
+name: Default
+   demands: 
+   - Agent.Name -equals ubuntuagent
 
 steps:
 - task: Maven@3
