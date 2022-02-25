@@ -4,11 +4,11 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
-
-name: Default
+ - master
+pool:
+   name: Default
    demands: 
-   - Agent.Name -equals ubuntuagent
+    -- Agent.Name -equals ubuntuagent
 
 steps:
 - task: Maven@3
